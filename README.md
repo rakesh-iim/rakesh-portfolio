@@ -1,5 +1,8 @@
 # Rakesh Kumar Behera — Portfolio
 
+> **Live demo →** https://rakesh-portfolio-seven-mu.vercel.app/
+
+[![Live demo](https://img.shields.io/badge/Live-Demo-34d399?style=flat-square&logo=vercel&logoColor=white)](https://rakesh-portfolio-seven-mu.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-fde68a.svg?style=flat-square)](LICENSE)
 [![Built with Vite](https://img.shields.io/badge/built%20with-Vite-34d399?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
 [![React](https://img.shields.io/badge/React-18-fbbf24?style=flat-square&logo=react&logoColor=white)](https://react.dev)

@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Float, MeshTransmissionMaterial, Environment } from '@react-three/drei';
+import { Float } from '@react-three/drei';
 import { useRef, Suspense } from 'react';
 import * as THREE from 'three';
 
@@ -40,21 +40,17 @@ function FloatingShape({
     <Float speed={1.2 * speed} rotationIntensity={0.4} floatIntensity={0.8}>
       <mesh ref={ref} position={position} scale={scale}>
         {geom}
-        <MeshTransmissionMaterial
-          backside
-          backsideThickness={0.4}
-          thickness={0.5}
-          roughness={0.12}
-          chromaticAberration={0.04}
-          anisotropy={0.3}
-          distortion={0.2}
-          distortionScale={0.4}
-          temporalDistortion={0.1}
-          ior={1.4}
+        <meshPhysicalMaterial
           color={color}
-          transmission={1}
+          metalness={0}
+          roughness={0.18}
+          transmission={0.85}
+          thickness={0.6}
+          ior={1.4}
           attenuationColor={color}
-          attenuationDistance={1.6}
+          attenuationDistance={2.2}
+          clearcoat={0.6}
+          clearcoatRoughness={0.2}
         />
       </mesh>
     </Float>
@@ -67,7 +63,6 @@ function ParallaxGroup({ children }: { children: React.ReactNode }) {
 
   useFrame((state) => {
     if (!group.current) return;
-    // Subtle parallax tied to mouse position
     const targetX = (state.pointer.x * viewport.width) / 80;
     const targetY = (state.pointer.y * viewport.height) / 80;
     group.current.position.x += (targetX - group.current.position.x) * 0.05;
@@ -82,14 +77,16 @@ export default function Scene3D() {
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
       <Canvas
         camera={{ position: [0, 0, 7], fov: 50 }}
-        dpr={[1, 1.6]}
+        dpr={[1, 1.5]}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
         frameloop="always"
       >
         <Suspense fallback={null}>
-          <ambientLight intensity={0.6} />
-          <directionalLight position={[5, 5, 5]} intensity={1.2} />
-          <directionalLight position={[-5, -3, -2]} intensity={0.6} color="#34d399" />
+          <hemisphereLight args={['#fde68a', '#34d399', 0.7]} />
+          <ambientLight intensity={0.4} />
+          <directionalLight position={[5, 6, 5]} intensity={1.4} color="#ffffff" />
+          <directionalLight position={[-6, -3, -2]} intensity={0.7} color="#34d399" />
+          <pointLight position={[3, -4, 2]} intensity={0.8} color="#fbbf24" />
 
           <ParallaxGroup>
             <FloatingShape position={[-3.2, 1.4, 0]} geometry="icosa" color="#34d399" scale={1.1} />
@@ -98,8 +95,6 @@ export default function Scene3D() {
             <FloatingShape position={[3.0, 2.2, -2]} geometry="octa" color="#10b981" speed={0.9} scale={0.85} />
             <FloatingShape position={[0, -3.2, -3]} geometry="icosa" color="#f59e0b" speed={0.7} scale={0.55} />
           </ParallaxGroup>
-
-          <Environment preset="city" />
         </Suspense>
       </Canvas>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink-950/60" />

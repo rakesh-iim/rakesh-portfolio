@@ -20,8 +20,8 @@ export default function Contact() {
         className="glass-strong relative overflow-hidden p-8 md:p-12"
       >
         {/* Decorative glow */}
-        <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-gradient-to-br from-accent-violet/40 to-accent-cyan/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gradient-to-tr from-accent-rose/30 to-accent-violet/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-gradient-to-br from-accent-emerald/40 to-accent-amber/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gradient-to-tr from-accent-cream/30 to-accent-emerald/10 blur-3xl" />
 
         <div className="relative grid gap-10 md:grid-cols-2">
           <div>
@@ -59,11 +59,11 @@ export default function Contact() {
               href={`mailto:${profile.email}`}
               className="glass flex items-center gap-3 p-4 transition hover:bg-white/10"
             >
-              <Mail className="h-4 w-4 text-accent-violet" />
+              <Mail className="h-4 w-4 text-accent-emerald" />
               <span className="text-sm text-slate-200">{profile.email}</span>
             </a>
             <div className="glass flex items-center gap-3 p-4">
-              <MapPin className="h-4 w-4 text-accent-cyan" />
+              <MapPin className="h-4 w-4 text-accent-amber" />
               <span className="text-sm text-slate-200">{profile.location}</span>
             </div>
             <a
@@ -72,7 +72,7 @@ export default function Contact() {
               rel="noreferrer"
               className="glass flex items-center gap-3 p-4 transition hover:bg-white/10"
             >
-              <Linkedin className="h-4 w-4 text-accent-rose" />
+              <Linkedin className="h-4 w-4 text-accent-cream" />
               <span className="text-sm text-slate-200">/in/rakesh-kumar-behera-rk821604</span>
             </a>
           </div>

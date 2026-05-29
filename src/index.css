@@ -19,16 +19,16 @@ html {
 body {
   @apply bg-ink-950 text-slate-200 font-sans antialiased;
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(167, 139, 250, 0.25), transparent 60%),
-    radial-gradient(900px 500px at 90% 20%, rgba(103, 232, 249, 0.12), transparent 60%),
-    radial-gradient(900px 500px at 10% 80%, rgba(253, 164, 175, 0.12), transparent 60%);
+    radial-gradient(1200px 600px at 50% -10%, rgba(52, 211, 153, 0.22), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(251, 191, 36, 0.14), transparent 60%),
+    radial-gradient(900px 500px at 10% 80%, rgba(253, 230, 138, 0.12), transparent 60%);
   background-attachment: fixed;
   overflow-x: hidden;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(167, 139, 250, 0.35);
+  background: rgba(52, 211, 153, 0.35);
   color: white;
 }
 
@@ -65,19 +65,19 @@ body {
     @apply font-display tracking-tight;
   }
   .gradient-text {
-    background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 40%, #67e8f9 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #fde68a 35%, #34d399 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .gradient-text-soft {
-    background: linear-gradient(135deg, #e2e8f0 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #e2e8f0 0%, #fbbf24 60%, #34d399 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .ring-glow {
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 40px -10px rgba(167, 139, 250, 0.35);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 40px -10px rgba(52, 211, 153, 0.35);
   }
 }
 

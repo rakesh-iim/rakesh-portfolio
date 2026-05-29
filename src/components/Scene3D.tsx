@@ -72,13 +72,13 @@ export default function Scene3D() {
         <Suspense fallback={null}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[5, 5, 5]} intensity={1.2} />
-          <directionalLight position={[-5, -3, -2]} intensity={0.6} color="#a78bfa" />
+          <directionalLight position={[-5, -3, -2]} intensity={0.6} color="#34d399" />
 
-          <FloatingShape position={[-3.2, 1.4, 0]} geometry="icosa" color="#a78bfa" scale={1.1} />
-          <FloatingShape position={[3.4, -1.2, -1]} geometry="torus" color="#67e8f9" speed={0.8} scale={1} />
-          <FloatingShape position={[-2.4, -2.1, -2]} geometry="sphere" color="#fda4af" speed={1.2} scale={0.7} />
-          <FloatingShape position={[3.0, 2.2, -2]} geometry="octa" color="#c4b5fd" speed={0.9} scale={0.85} />
-          <FloatingShape position={[0, -3.2, -3]} geometry="icosa" color="#7dd3fc" speed={0.7} scale={0.55} />
+          <FloatingShape position={[-3.2, 1.4, 0]} geometry="icosa" color="#34d399" scale={1.1} />
+          <FloatingShape position={[3.4, -1.2, -1]} geometry="torus" color="#fbbf24" speed={0.8} scale={1} />
+          <FloatingShape position={[-2.4, -2.1, -2]} geometry="sphere" color="#fde68a" speed={1.2} scale={0.7} />
+          <FloatingShape position={[3.0, 2.2, -2]} geometry="octa" color="#10b981" speed={0.9} scale={0.85} />
+          <FloatingShape position={[0, -3.2, -3]} geometry="icosa" color="#f59e0b" speed={0.7} scale={0.55} />
 
           <Environment preset="city" />
         </Suspense>

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 const links = [
   { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
@@ -32,7 +33,7 @@ export default function Navbar() {
         }`}
       >
         <a href="#top" className="flex items-center gap-2 text-sm font-semibold tracking-wide">
-          <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-accent-violet to-accent-cyan text-ink-950">
+          <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-accent-emerald to-accent-amber text-ink-950">
             R
           </span>
           <span className="hidden sm:inline gradient-text-soft">Rakesh Behera</span>

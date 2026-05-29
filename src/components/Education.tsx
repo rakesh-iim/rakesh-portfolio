@@ -16,7 +16,7 @@ export default function Education() {
         {/* Education */}
         <div>
           <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-400">
-            <GraduationCap className="h-4 w-4 text-accent-violet" /> Education
+            <GraduationCap className="h-4 w-4 text-accent-emerald" /> Education
           </h3>
           <div className="space-y-4">
             {profile.education.map((e, i) => (
@@ -28,7 +28,7 @@ export default function Education() {
                 transition={{ duration: 0.5, delay: i * 0.06 }}
                 className="glass p-5"
               >
-                <div className="text-xs font-medium uppercase tracking-wider text-accent-cyan">
+                <div className="text-xs font-medium uppercase tracking-wider text-accent-amber">
                   {e.period}
                 </div>
                 <h4 className="mt-1 heading-display text-base font-semibold text-white">
@@ -43,7 +43,7 @@ export default function Education() {
         {/* Certifications */}
         <div>
           <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-slate-400">
-            <Award className="h-4 w-4 text-accent-cyan" /> Certifications
+            <Award className="h-4 w-4 text-accent-amber" /> Certifications
           </h3>
           <div className="grid gap-3 sm:grid-cols-2">
             {profile.certifications.map((c, i) => (
@@ -56,7 +56,7 @@ export default function Education() {
                 className="glass group p-4 transition hover:bg-white/[0.07]"
               >
                 <div className="flex items-start gap-2.5">
-                  <div className="mt-0.5 grid h-7 w-7 flex-shrink-0 place-items-center rounded-lg bg-gradient-to-br from-accent-violet/40 to-accent-cyan/30">
+                  <div className="mt-0.5 grid h-7 w-7 flex-shrink-0 place-items-center rounded-lg bg-gradient-to-br from-accent-emerald/40 to-accent-amber/30">
                     <Award className="h-3.5 w-3.5 text-white" />
                   </div>
                   <div>

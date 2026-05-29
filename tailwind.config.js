@@ -9,27 +9,27 @@ export default {
       },
       colors: {
         ink: {
-          950: '#070b14',
-          900: '#0b1020',
-          800: '#101736',
+          950: '#050a08',
+          900: '#091410',
+          800: '#0f2018',
         },
         glass: {
           DEFAULT: 'rgba(255,255,255,0.06)',
           strong: 'rgba(255,255,255,0.10)',
         },
         accent: {
-          violet: '#a78bfa',
-          cyan: '#67e8f9',
-          rose: '#fda4af',
+          emerald: '#34d399',
+          amber: '#fbbf24',
+          cream: '#fde68a',
         },
       },
       backgroundImage: {
         'radial-glow':
-          'radial-gradient(1200px 600px at 50% -10%, rgba(167,139,250,0.35), transparent 60%), radial-gradient(900px 500px at 90% 20%, rgba(103,232,249,0.18), transparent 60%), radial-gradient(900px 500px at 10% 80%, rgba(253,164,175,0.18), transparent 60%)',
+          'radial-gradient(1200px 600px at 50% -10%, rgba(52,211,153,0.32), transparent 60%), radial-gradient(900px 500px at 90% 20%, rgba(251,191,36,0.20), transparent 60%), radial-gradient(900px 500px at 10% 80%, rgba(253,230,138,0.16), transparent 60%)',
       },
       boxShadow: {
-        glass: '0 8px 32px 0 rgba(8, 12, 28, 0.45)',
-        glow: '0 0 40px rgba(167,139,250,0.35)',
+        glass: '0 8px 32px 0 rgba(5, 12, 8, 0.5)',
+        glow: '0 0 40px rgba(52,211,153,0.35)',
       },
       keyframes: {
         float: {

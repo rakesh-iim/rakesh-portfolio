@@ -16,7 +16,7 @@ export default function Experience() {
         {/* Vertical line */}
         <div
           aria-hidden
-          className="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-accent-violet/40 via-white/10 to-transparent md:block"
+          className="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-accent-emerald/40 via-white/10 to-transparent md:block"
         />
 
         <ol className="space-y-5">
@@ -34,7 +34,7 @@ export default function Experience() {
                 aria-hidden
                 className="absolute left-0 top-7 hidden h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-ink-900/80 backdrop-blur md:flex"
               >
-                <Briefcase className="h-3.5 w-3.5 text-accent-violet" />
+                <Briefcase className="h-3.5 w-3.5 text-accent-emerald" />
               </div>
 
               <div className="glass group p-6 transition hover:bg-white/[0.07] md:p-7">
@@ -42,7 +42,7 @@ export default function Experience() {
                   <h3 className="heading-display text-lg font-semibold text-white md:text-xl">
                     {job.role}
                   </h3>
-                  <span className="text-xs font-medium uppercase tracking-wider text-accent-cyan">
+                  <span className="text-xs font-medium uppercase tracking-wider text-accent-amber">
                     {job.period}
                   </span>
                 </div>
@@ -58,7 +58,7 @@ export default function Experience() {
                 <ul className="mt-4 space-y-2 text-sm text-slate-300">
                   {job.highlights.map((h, k) => (
                     <li key={k} className="flex gap-3">
-                      <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-accent-violet" />
+                      <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-accent-emerald" />
                       <span className="leading-relaxed">{h}</span>
                     </li>
                   ))}

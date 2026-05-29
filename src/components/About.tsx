@@ -56,7 +56,7 @@ export default function About() {
               className="glass group p-5 transition hover:bg-white/[0.07]"
             >
               <div className="flex items-start gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-accent-violet/30 to-accent-cyan/20 ring-1 ring-white/10">
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-accent-emerald/30 to-accent-amber/20 ring-1 ring-white/10">
                   <p.icon className="h-5 w-5 text-white" />
                 </div>
                 <div>

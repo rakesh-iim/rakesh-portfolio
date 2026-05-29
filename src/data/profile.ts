@@ -142,6 +142,85 @@ export const profile = {
       issuer: 'Industry-Recognized',
     },
   ],
+  projects: [
+    {
+      title: 'The Ultimate PM',
+      subtitle: 'Inter-B-school case competition · IIM Sambalpur',
+      year: '2025',
+      tags: ['Product', 'Case Comp', 'Leadership'],
+      description:
+        'Co-organized and led promotional strategy for a flagship product-management case competition engaging 500+ students across India.',
+      impact: ['500+ participants', '15+ B-schools', 'Cross-platform reach via LinkedIn, Instagram, Unstop'],
+    },
+    {
+      title: 'Product Decipher',
+      subtitle: 'Product breakdown challenge · IIM Sambalpur',
+      year: '2025',
+      tags: ['Product', 'Analysis', 'Strategy'],
+      description:
+        'Designed and executed a product-decoding competition that pushed participants to dissect real products through frameworks like RICE and HEART.',
+      impact: ['High-quality participation', 'Targeted outreach campaigns', 'Curated judging panel'],
+    },
+    {
+      title: 'Udbhavanam — AlphaBeta Flagship',
+      subtitle: 'Annual product-management event · IIM Sambalpur',
+      year: '2025',
+      tags: ['Events', 'Operations', 'Stakeholder Mgmt'],
+      description:
+        'Managed end-to-end execution of the club\'s flagship event — guest coordination, logistics, brand partnerships, and on-ground operations.',
+      impact: ['25+ team members coordinated', '10+ vendor and sponsor partnerships', 'On-time delivery, budget adherence'],
+    },
+    {
+      title: 'TCS — Enterprise System Engineering',
+      subtitle: 'Tata Consultancy Services · 3 yrs 9 mos',
+      year: '2021 — 2025',
+      tags: ['Software', 'Enterprise', 'Cloud'],
+      description:
+        'Delivered software engineering work across the full project lifecycle for enterprise clients, building the technical foundation now applied to consulting problems.',
+      impact: ['Promoted across three levels', 'Cross-functional team delivery', 'Hands-on with cloud + analytics stack'],
+    },
+    {
+      title: 'Horizon — Techno-Cultural Fest',
+      subtitle: 'IGIT Sarang · Photography Head',
+      year: '2019 — 2020',
+      tags: ['Events', 'Creative', 'Leadership'],
+      description:
+        'Led the photography vertical for the institute\'s flagship fest — built a content pipeline that lifted social media reach by 40% and turnout by ~30%.',
+      impact: ['1,000+ event participants', '+40% social reach', '+30% turnout YoY'],
+    },
+    {
+      title: 'Drishya 360° — Photography Club',
+      subtitle: 'IGIT Sarang · Secretary',
+      year: '2018 — 2021',
+      tags: ['Creative', 'Leadership', 'Community'],
+      description:
+        'Built and ran the institute\'s photography club for three years, mentoring 25+ members and curating campus-wide visual stories.',
+      impact: ['25+ active members mentored', 'Multi-year visual archive built', 'Higher member retention'],
+    },
+  ],
+  testimonials: [
+    {
+      quote:
+        'Rakesh consistently brought structure to ambiguous problems and lifted the people around him. A rare combination of technical depth and strategic clarity.',
+      author: 'Coming soon',
+      role: 'Manager — to be added',
+      placeholder: true,
+    },
+    {
+      quote:
+        'Working with Rakesh on case competitions taught me how to think in frameworks. He sets a high bar for execution and follow-through.',
+      author: 'Coming soon',
+      role: 'Peer — to be added',
+      placeholder: true,
+    },
+    {
+      quote:
+        'One of the most reliable leaders we had on the production engineering society. Organized, calm under pressure, and outcome-focused.',
+      author: 'Coming soon',
+      role: 'Faculty — to be added',
+      placeholder: true,
+    },
+  ],
   education: [
     {
       school: 'Indian Institute of Management Sambalpur',

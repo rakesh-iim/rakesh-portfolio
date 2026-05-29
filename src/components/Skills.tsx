@@ -4,11 +4,11 @@ import SectionTitle from './SectionTitle';
 import { profile } from '../data/profile';
 
 const groups = [
-  { key: 'strategy', label: 'Strategy & Marketing', icon: BrainCircuit, accent: 'from-accent-violet/30' },
-  { key: 'operations', label: 'Operations', icon: Cog, accent: 'from-accent-cyan/30' },
-  { key: 'analytics', label: 'Analytics & Finance', icon: BarChart3, accent: 'from-accent-rose/30' },
-  { key: 'leadership', label: 'Leadership', icon: Users, accent: 'from-accent-violet/30' },
-  { key: 'technical', label: 'Technical', icon: Code2, accent: 'from-accent-cyan/30' },
+  { key: 'strategy', label: 'Strategy & Marketing', icon: BrainCircuit, accent: 'from-accent-emerald/30' },
+  { key: 'operations', label: 'Operations', icon: Cog, accent: 'from-accent-amber/30' },
+  { key: 'analytics', label: 'Analytics & Finance', icon: BarChart3, accent: 'from-accent-cream/30' },
+  { key: 'leadership', label: 'Leadership', icon: Users, accent: 'from-accent-emerald/30' },
+  { key: 'technical', label: 'Technical', icon: Code2, accent: 'from-accent-amber/30' },
 ] as const;
 
 export default function Skills() {

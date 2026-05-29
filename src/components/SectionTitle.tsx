@@ -18,7 +18,7 @@ export default function SectionTitle({
       className="mb-12 md:mb-16"
     >
       <div className="chip mb-4">
-        <span className="h-1.5 w-1.5 rounded-full bg-accent-violet" />
+        <span className="h-1.5 w-1.5 rounded-full bg-accent-emerald" />
         {eyebrow}
       </div>
       <h2 className="heading-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">

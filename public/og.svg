@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050a08"/>
+      <stop offset="1" stop-color="#0f2018"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.2" cy="0.15" r="0.6">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.85" cy="0.85" r="0.55">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Decorative glass shapes -->
+  <g opacity="0.55">
+    <circle cx="990" cy="120" r="65" fill="none" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.65"/>
+    <circle cx="990" cy="120" r="40" fill="none" stroke="#34d399" stroke-width="1" stroke-opacity="0.45"/>
+    <polygon points="1080,500 1140,470 1140,535 1080,565" fill="none" stroke="#fbbf24" stroke-width="1.2" stroke-opacity="0.65"/>
+    <polygon points="95,420 145,395 145,450 95,475" fill="none" stroke="#fde68a" stroke-width="1.2" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Small monogram badge -->
+  <g transform="translate(80, 80)">
+    <rect width="64" height="64" rx="16" fill="url(#badgeGrad)"/>
+    <text x="32" y="44" font-family="Space Grotesk, Inter, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#050a08">R</text>
+  </g>
+  <text x="160" y="120" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#cbd5e1" letter-spacing="2">RAKESH KUMAR BEHERA</text>
+
+  <!-- Hero name -->
+  <text x="80" y="320" font-family="Space Grotesk, Inter, sans-serif" font-size="98" font-weight="700" fill="url(#text)" letter-spacing="-2">Strategy. Marketing.</text>
+  <text x="80" y="420" font-family="Space Grotesk, Inter, sans-serif" font-size="98" font-weight="700" fill="url(#text)" letter-spacing="-2">IT Consulting.</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="490" font-family="Inter, sans-serif" font-size="26" font-weight="400" fill="#94a3b8">MBA'27 IIM Sambalpur · Lean Six Sigma Green Belt · Ex-TCS</text>
+
+  <!-- Footer row -->
+  <g transform="translate(80, 555)">
+    <rect width="160" height="36" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)"/>
+    <circle cx="22" cy="18" r="4" fill="#34d399"/>
+    <text x="34" y="24" font-family="Inter, sans-serif" font-size="14" fill="#e2e8f0">Open to roles</text>
+
+    <text x="180" y="24" font-family="Inter, sans-serif" font-size="14" fill="#64748b">rakesh-portfolio-seven-mu.vercel.app</text>
+  </g>
+</svg>

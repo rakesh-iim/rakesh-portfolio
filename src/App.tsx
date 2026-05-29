@@ -1,5 +1,6 @@
-import Scene3D from './components/Scene3D';
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
+import ScrollProgress from './components/ScrollProgress';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -9,12 +10,17 @@ import Education from './components/Education';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 
+const Scene3D = lazy(() => import('./components/Scene3D'));
+
 export default function App() {
   return (
     <>
-      <Scene3D />
+      <Suspense fallback={null}>
+        <Scene3D />
+      </Suspense>
+      <ScrollProgress />
       <Navbar />
-      <main className="relative z-10">
+      <main id="main" className="relative z-10">
         <Hero />
         <About />
         <Experience />

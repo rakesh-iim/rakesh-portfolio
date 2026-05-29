@@ -79,6 +79,21 @@ body {
   .ring-glow {
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 40px -10px rgba(52, 211, 153, 0.35);
   }
+  .skip-to-content {
+    @apply absolute left-2 top-2 z-[100] -translate-y-20 rounded-lg bg-accent-emerald px-4 py-2 text-sm font-semibold text-ink-950 shadow-glass transition focus:translate-y-0;
+  }
+}
+
+/* Accessible focus rings */
+:focus-visible {
+  outline: 2px solid #34d399;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #34d399;
+  outline-offset: 3px;
 }
 
 /* Reduce motion */

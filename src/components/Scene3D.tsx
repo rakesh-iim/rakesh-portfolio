@@ -1,4 +1,4 @@
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Float, MeshTransmissionMaterial, Environment } from '@react-three/drei';
 import { useRef, Suspense } from 'react';
 import * as THREE from 'three';
@@ -61,29 +61,47 @@ function FloatingShape({
   );
 }
 
+function ParallaxGroup({ children }: { children: React.ReactNode }) {
+  const group = useRef<THREE.Group>(null);
+  const { viewport } = useThree();
+
+  useFrame((state) => {
+    if (!group.current) return;
+    // Subtle parallax tied to mouse position
+    const targetX = (state.pointer.x * viewport.width) / 80;
+    const targetY = (state.pointer.y * viewport.height) / 80;
+    group.current.position.x += (targetX - group.current.position.x) * 0.05;
+    group.current.position.y += (targetY - group.current.position.y) * 0.05;
+  });
+
+  return <group ref={group}>{children}</group>;
+}
+
 export default function Scene3D() {
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10">
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
       <Canvas
         camera={{ position: [0, 0, 7], fov: 50 }}
         dpr={[1, 1.6]}
-        gl={{ antialias: true, alpha: true }}
+        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
+        frameloop="always"
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[5, 5, 5]} intensity={1.2} />
           <directionalLight position={[-5, -3, -2]} intensity={0.6} color="#34d399" />
 
-          <FloatingShape position={[-3.2, 1.4, 0]} geometry="icosa" color="#34d399" scale={1.1} />
-          <FloatingShape position={[3.4, -1.2, -1]} geometry="torus" color="#fbbf24" speed={0.8} scale={1} />
-          <FloatingShape position={[-2.4, -2.1, -2]} geometry="sphere" color="#fde68a" speed={1.2} scale={0.7} />
-          <FloatingShape position={[3.0, 2.2, -2]} geometry="octa" color="#10b981" speed={0.9} scale={0.85} />
-          <FloatingShape position={[0, -3.2, -3]} geometry="icosa" color="#f59e0b" speed={0.7} scale={0.55} />
+          <ParallaxGroup>
+            <FloatingShape position={[-3.2, 1.4, 0]} geometry="icosa" color="#34d399" scale={1.1} />
+            <FloatingShape position={[3.4, -1.2, -1]} geometry="torus" color="#fbbf24" speed={0.8} scale={1} />
+            <FloatingShape position={[-2.4, -2.1, -2]} geometry="sphere" color="#fde68a" speed={1.2} scale={0.7} />
+            <FloatingShape position={[3.0, 2.2, -2]} geometry="octa" color="#10b981" speed={0.9} scale={0.85} />
+            <FloatingShape position={[0, -3.2, -3]} geometry="icosa" color="#f59e0b" speed={0.7} scale={0.55} />
+          </ParallaxGroup>
 
           <Environment preset="city" />
         </Suspense>
       </Canvas>
-      {/* Subtle vignette */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink-950/60" />
     </div>
   );

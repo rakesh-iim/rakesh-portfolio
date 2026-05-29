@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, MapPin, Mail, Linkedin } from 'lucide-react';
+import { ArrowDown, MapPin, Mail, Linkedin, FileDown } from 'lucide-react';
 import { profile } from '../data/profile';
+import CountUp from './CountUp';
 
 const fade = {
   hidden: { opacity: 0, y: 20 },
@@ -105,6 +106,15 @@ export default function Hero() {
           >
             Let's connect
           </a>
+          <a
+            href="/rakesh-behera-resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 px-6 py-3 text-sm text-slate-200 backdrop-blur transition hover:bg-white/5"
+          >
+            <FileDown className="h-4 w-4" />
+            Résumé
+          </a>
         </motion.div>
 
         {/* Metrics row */}
@@ -121,7 +131,7 @@ export default function Hero() {
               className="glass px-4 py-5 text-center"
             >
               <div className="heading-display text-2xl font-semibold gradient-text-soft">
-                {m.value}
+                <CountUp value={m.value} />
               </div>
               <div className="mt-1 text-[11px] uppercase tracking-wider text-slate-400">
                 {m.label}

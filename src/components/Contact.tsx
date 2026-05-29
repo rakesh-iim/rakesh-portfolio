@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, MapPin, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, MapPin, ArrowUpRight, FileDown } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import { profile } from '../data/profile';
 
@@ -49,6 +49,16 @@ export default function Contact() {
               >
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
+                <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href="/rakesh-behera-resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10"
+              >
+                <FileDown className="h-4 w-4" />
+                Résumé
                 <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </div>
